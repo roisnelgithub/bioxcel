@@ -15,7 +15,7 @@ const SiteDescription = () => {
       sx={{ width: "100%" }}
     >
       {min768 ? (
-        <Stack alignItems="end" sx={{ mr: min768 ? 4 : 0 }}>
+        <Stack alignItems="end" sx={{ mr: min768 ? 4 : 0, mt: 2 }}>
           <Box justifyContent="end">
             <Typography
               component="span"
@@ -23,10 +23,11 @@ const SiteDescription = () => {
                 fontSize: 11,
                 color: colors.WHITE,
                 textAlign: "end",
-                bgcolor: colors.BG_BLUE_DARK,
+                bgcolor: colors.BG_BLUE_GREY,
                 borderRadius: "30px",
                 py: 0.8,
                 px: 4,
+                mt: 2,
               }}
             >
               {descriptionSite}

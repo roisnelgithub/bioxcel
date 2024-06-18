@@ -28,7 +28,7 @@ const Card = ({ id, icon, subtitle, title }: CardProps) => {
         maxWidth: 266,
         height: 294,
         bgcolor: colors.BG_BLUE_DARK,
-        border: "solid 10px #1d2f3f",
+        border: `solid 10px ${colors.BG_BLUE_GREY}`,
         borderRadius: "5px",
         py: 1,
         ":hover": { cursor: "pointer" },

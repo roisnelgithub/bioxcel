@@ -8,8 +8,11 @@ const Footer = () => {
   const min768 = useMediaQuery("(min-width:768px)");
   const min1024 = useMediaQuery("(min-width:1024px)");
   return (
-    <Box sx={{ bgcolor: colors.BG_BLUE_DARK, p: min768 ? 6 : 4, mt: 10 }}>
-      <Stack spacing={2}>
+    <Stack
+      alignItems={min768 ? "center" : "start"}
+      sx={{ bgcolor: colors.BG_BLUE_DARK, p: min768 ? 6 : 4, mt: 10 }}
+    >
+      <Stack spacing={2} sx={{ maxWidth: "1064px" }}>
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={0}>
           <Box component="article" gridColumn={min768 ? "span 6" : "span 12"}>
             <FooterMenu />
@@ -40,7 +43,7 @@ const Footer = () => {
           </Typography>
         </Stack>
       </Stack>
-    </Box>
+    </Stack>
   );
 };
 

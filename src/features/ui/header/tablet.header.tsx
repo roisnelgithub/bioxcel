@@ -17,10 +17,11 @@ const TabletHeader = ({ show }: TableHeaderProps) => {
     <Stack
       sx={{
         position: "fixed",
-        top: show ? 0 : -80,
+        top: show ? 0 : -120,
         left: 0,
         width: "100%",
-        transition: "top 0.5s ease-in-out 0s",
+        transition: "top 1s ease-in-out 0s",
+        mt: 2,
       }}
     >
       <Stack justifyContent="end" alignItems="center" sx={{ height: "70px" }}>
