@@ -9,7 +9,7 @@ import { GetUpdate, MainContent, References } from "./components";
 const sideMenu = (
   <Box
     sx={{
-      width: "100%",
+      width: "100vw",
       height: "100vh",
       bgcolor: colors.BG_BLUE_DARK,
       position: "absolute",
