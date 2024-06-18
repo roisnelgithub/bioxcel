@@ -10,12 +10,7 @@ const Footer = () => {
   return (
     <Box sx={{ bgcolor: colors.BG_BLUE_DARK, p: min768 ? 6 : 4, mt: 10 }}>
       <Stack spacing={2}>
-        <Box
-          display="grid"
-          gridTemplateColumns="repeat(12, 1fr)"
-          gap={4}
-          sx={{ p: 0 }}
-        >
+        <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={0}>
           <Box component="article" gridColumn={min768 ? "span 6" : "span 12"}>
             <FooterMenu />
           </Box>

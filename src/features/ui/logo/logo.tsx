@@ -7,7 +7,7 @@ interface LogoProps {
 }
 const Logo = ({ width = 120 }: LogoProps) => {
   return (
-    <Box component="figure">
+    <Box component="figure" sx={{ ml: 0 }}>
       <Box
         component="img"
         src={logo}
