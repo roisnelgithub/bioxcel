@@ -19,7 +19,7 @@ const MobileHeader = ({ show }: MobileHeaderProps) => {
         top: show ? 0 : -80,
         left: 0,
         width: "100vw",
-        transition: "ease-in-out 0.5s",
+        transition: "top 0.5s ease-in-out 0s",
         zIndex: 100,
       }}
     >

@@ -14,9 +14,7 @@ const MainContent = () => {
       spacing={6}
       sx={{ mt: min768 ? "80px" : "70px" }}
     >
-      <Box component="article">
-        <SiteDescription />
-      </Box>
+      <SiteDescription />
       <Box component="section">
         <MainText />
       </Box>

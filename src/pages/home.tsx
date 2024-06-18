@@ -9,7 +9,7 @@ import { GetUpdate, MainContent, References } from "./components";
 const sideMenu = (
   <Box
     sx={{
-      width: "100vw",
+      width: "100%",
       height: "100vh",
       bgcolor: colors.BG_BLUE_DARK,
       position: "absolute",
@@ -30,7 +30,7 @@ const Home = () => {
   }
 
   return (
-    <Stack alignItems="center" sx={{ width: "100vw" }}>
+    <Stack alignItems="center" justifyContent="center" sx={{ width: "100%" }}>
       <Paper sx={{ boxShadow: "0px 2px 12px rgba(0,0,0,0.2)" }} elevation={2}>
         <Stack sx={{ width: "100%", maxWidth: "1366px" }}>
           <Box component="header">
@@ -42,7 +42,7 @@ const Home = () => {
                 height: min768 ? 650 : "100%",
               }}
             >
-              <Box component="nav">
+              <Box component="section">
                 <Header />
               </Box>
               <Box component="section">
