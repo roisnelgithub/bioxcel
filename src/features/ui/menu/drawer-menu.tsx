@@ -7,7 +7,11 @@ const DrawerMenu = () => {
   return (
     <Stack alignItems="end" spacing={3} sx={{ color: colors.WHITE }}>
       {options.map((option) => {
-        return <Typography key={option.id}>{option.text}</Typography>;
+        return (
+          <Typography component="a" key={option.id}>
+            {option.text}
+          </Typography>
+        );
       })}
     </Stack>
   );

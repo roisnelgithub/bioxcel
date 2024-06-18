@@ -12,7 +12,11 @@ const FooterMenu = () => {
       <Stack spacing={2} direction={min768 ? "row" : "column"}>
         {options.map((option) => {
           return (
-            <Box key={option} sx={{ ":hover": { cursor: "pointer" } }}>
+            <Box
+              component="a"
+              key={option}
+              sx={{ ":hover": { cursor: "pointer" } }}
+            >
               <Typography
                 sx={{ color: colors.WHITE, fontSize: min1024 ? 18 : 15 }}
               >

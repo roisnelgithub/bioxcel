@@ -20,6 +20,7 @@ const HeaderMenu = ({ fontSize }: HeaderMenuProps) => {
         return (
           <Box
             key={option.id}
+            component="a"
             sx={{
               borderBottom: `1px solid ${colors.BG_BLUE_DARK}`,
               ":hover": {
