@@ -7,12 +7,14 @@ interface LogoProps {
 }
 const Logo = ({ width = 120 }: LogoProps) => {
   return (
-    <Box
-      component="img"
-      src={logo}
-      alt="BioXel logo"
-      sx={{ width: width }}
-    ></Box>
+    <Box component="figure">
+      <Box
+        component="img"
+        src={logo}
+        alt="BioXel logo"
+        sx={{ width: width }}
+      ></Box>
+    </Box>
   );
 };
 

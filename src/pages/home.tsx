@@ -33,33 +33,53 @@ const Home = () => {
     <Stack alignItems="center" sx={{ width: "100vw" }}>
       <Paper sx={{ boxShadow: "0px 2px 12px rgba(0,0,0,0.2)" }} elevation={2}>
         <Stack sx={{ width: "100%", maxWidth: "1366px" }}>
-          <Stack
-            sx={{
-              background: `linear-gradient( rgb(0, 22, 57,0.8) , transparent), url(${smoke}) 50% 100%/cover`,
-              backgroundRepeat: "no-repeat",
-              width: "100%",
-              height: min768 ? 650 : "100%",
-            }}
-          >
-            <Header />
-            <MainContent />
-          </Stack>
-          <CardList />
-          <GetUpdate />
-          <References />
-          <Footer />
-          <Box
-            sx={{
-              position: "fixed",
-              top: 70,
-              left: 0,
-              zIndex: 100,
-            }}
-          >
-            <Slide direction="left" in={isOpen} mountOnEnter unmountOnExit>
-              {sideMenu}
-            </Slide>
+          <Box component="header">
+            <Stack
+              sx={{
+                background: `linear-gradient( rgb(0, 22, 57,0.8) , transparent), url(${smoke}) 50% 100%/cover`,
+                backgroundRepeat: "no-repeat",
+                width: "100%",
+                height: min768 ? 650 : "100%",
+              }}
+            >
+              <Box component="nav">
+                <Header />
+              </Box>
+              <Box component="section">
+                <MainContent />
+              </Box>
+            </Stack>
           </Box>
+          <Box component="main">
+            <Box component="section">
+              <CardList />
+            </Box>
+            <Box component="article">
+              <GetUpdate />
+            </Box>
+            <Box component="article">
+              <References />
+            </Box>
+          </Box>
+
+          <Box component="footer">
+            <Footer />
+          </Box>
+          {!min768 && (
+            <Box
+              component="aside"
+              sx={{
+                position: "fixed",
+                top: 70,
+                left: 0,
+                zIndex: 100,
+              }}
+            >
+              <Slide direction="left" in={isOpen} mountOnEnter unmountOnExit>
+                {sideMenu}
+              </Slide>
+            </Box>
+          )}
         </Stack>
       </Paper>
     </Stack>

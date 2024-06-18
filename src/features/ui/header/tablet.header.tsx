@@ -38,8 +38,9 @@ const TabletHeader = ({ show }: TableHeaderProps) => {
           justifyContent="space-between"
           direction="row"
           spacing={3}
+          component="section"
         >
-          <Box sx={{ pl: min1024 ? 4 : 0 }}>
+          <Box component="article" sx={{ pl: min1024 ? 4 : 0 }}>
             <Logo width={min1230 ? 192 : min1024 ? 150 : 120} />
           </Box>
           <Stack
@@ -48,16 +49,24 @@ const TabletHeader = ({ show }: TableHeaderProps) => {
             justifyContent="center"
             spacing={min1230 ? 6 : min1024 ? 3 : 1.5}
             sx={{ height: 70 }}
+            component="article"
           >
             <Box
               component="img"
               src={homeIcon}
               alt="Home"
-              sx={{ width: 20, height: 20 }}
+              sx={{
+                width: 20,
+                height: 20,
+              }}
             />
-            <HeaderMenu fontSize={min1230 ? 13 : 11} />
-            <OutlinedBtn small={!min1230} />
-            <Box sx={{ pr: min1230 ? 4 : 0 }}>
+            <Box component="article">
+              <HeaderMenu fontSize={min1230 ? 13 : 11} />
+            </Box>
+            <Box component="article">
+              <OutlinedBtn small={!min1230} />
+            </Box>
+            <Box component="article" sx={{ pr: min1230 ? 4 : 0 }}>
               <SocialMedia small={!min1230} />
             </Box>
           </Stack>

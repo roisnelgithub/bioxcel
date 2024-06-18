@@ -27,7 +27,11 @@ const MainText = () => {
         gap={min320 ? 1 : 0}
         sx={{ px: min320 ? 4 : 1 }}
       >
-        <Box gridColumn="span 1" sx={{ display: "grid", placeItems: "center" }}>
+        <Box
+          component="article"
+          gridColumn="span 1"
+          sx={{ display: "grid", placeItems: "center" }}
+        >
           <Box
             component="img"
             src={thermometer}
@@ -39,7 +43,7 @@ const MainText = () => {
           />
         </Box>
 
-        <Box gridColumn="span 2">
+        <Box component="article" gridColumn="span 2">
           <Stack
             sx={{ mt: min768 ? "50px" : "0px", p: 1, color: colors.WHITE }}
           >

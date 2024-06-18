@@ -23,7 +23,7 @@ const CardList = () => {
           return (
             <Grid key={id} item>
               <Fade in={showCards} timeout={1000 * index - index * 500}>
-                <Box>
+                <Box component="article">
                   <Card icon={icon} subtitle={subtitle} title={title} id={id} />
                 </Box>
               </Fade>

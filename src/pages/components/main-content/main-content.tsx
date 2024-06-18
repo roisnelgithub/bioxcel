@@ -1,4 +1,4 @@
-import { Stack, useMediaQuery } from "@mui/material";
+import { Box, Stack, useMediaQuery } from "@mui/material";
 
 import CommentText from "./comment-text";
 import MainText from "./main-text";
@@ -14,9 +14,17 @@ const MainContent = () => {
       spacing={6}
       sx={{ mt: min768 ? "80px" : "70px" }}
     >
-      <SiteDescription />
-      <MainText />
-      {!min768 && <CommentText />}
+      <Box component="article">
+        <SiteDescription />
+      </Box>
+      <Box component="section">
+        <MainText />
+      </Box>
+      {!min768 && (
+        <Box component="article">
+          <CommentText />
+        </Box>
+      )}
     </Stack>
   );
 };
